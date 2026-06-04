@@ -10,8 +10,6 @@ mysqli_query($conn, "CREATE TABLE IF NOT EXISTS users (
     role VARCHAR(50) DEFAULT 'pembeli'
 )");
 
-@mysqli_query($conn, "ALTER TABLE users ADD role VARCHAR(50) DEFAULT 'pembeli'");
-
 if (isset($_POST["register"])) {
     $username = strtolower(stripslashes($_POST["username"]));
     $password = mysqli_real_escape_string($conn, $_POST["password"]);
